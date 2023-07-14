@@ -1,0 +1,282 @@
+
+/*Estilizado general*/
+
+*{
+    box-sizing: border-box;
+}
+
+h1{font-size: 3.3em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{list-style: none;}
+li{font-size: 1.25em}
+
+body{
+    font-family: sans-serif;
+    margin: 0%;
+}
+
+button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: rgb(3, 139, 250);
+}
+
+button:hover{
+    background-color: rgb(27, 105, 168);
+    
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-libros{
+    color: rgb(3, 139, 250);
+    font-size: 1.5em;
+}
+
+header{
+    background-color: white;
+}
+
+header .Logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(3, 139, 250);
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+    
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: rgb(3, 139, 250);
+}
+
+#Inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: rgb(245,245,245);
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(Imagenes/647e54a64340d.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#Inicio h1{
+    color: white;
+
+}
+
+#lectura .container{
+    text-align: center;
+    padding: 150px 15px;
+}
+
+#Recomendaciones{
+    background-color: black;
+    color: white;
+}
+
+#Recomendaciones .container{
+    text-align: center;
+    padding: 150px 15px;
+}
+
+footer{
+    background-color: rgb(245,245,245);
+    list-style: none;
+    text-transform: capitalize;
+    padding: 20px 0;
+
+}  
+
+footer .container{
+    max-width: 1200px;
+    margin: 0 auto; 
+
+}
+
+footer .footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+
+footer .footer-links h4{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid rgb(3, 139, 250);
+    padding-bottom: 10px;
+    display: inline-block;
+} 
+
+footer a{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+footer a:hover{
+    color: rgb(0, 0, 0);
+    padding-left: 6px;
+}
+
+footer .social-link a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgb(3, 139, 250);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    transition: all .5s ease;
+}
+
+@media (min-width: 720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 30px;
+    }
+
+    #Inicio h1{
+        font-size: 5em;
+        margin: 0;
+        padding: 0px 700px 0px 0px;
+    }
+
+
+    #lectura .container{
+        display: flex;
+        justify-content: space-evenly;
+       
+    }
+
+    #lectura .text-container{
+        width: 50%;
+        text-align: initial;
+        padding: 0px 30px;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 30px;
+
+    }
+
+    #lectura .img-container{
+        background-image: url(Imagenes/heist.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 500px;
+
+    }    
+
+    #Recomendaciones .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #Recomendaciones .text-reco{
+        width: 50%;
+        text-align: initial;
+        padding: 0px 30px;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 30px;
+    }
+
+    #Recomendaciones .img-reco{
+        background-image: url(Imagenes/ventana.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 550px;
+        width: 550px;
+        border-radius: 30px;
+    }
+
+}
+
+@media(max-width:991px){
+
+    footer .footer-row{
+        text-align: center;
+    }
+
+    footer .footer-links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
